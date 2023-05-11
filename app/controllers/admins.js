@@ -1069,18 +1069,18 @@ exports.createUser = async (req, res) => {
   }
 };
 
-exports.projectApproval = async (req, res) => {
-  try {
-    const data = req.body;
-    await updateItem(Models.Project, data, { id: data.id });
-    res.status(200).json({
-      code: 200,
-      status: data.status == 'approved' ? "approved" : "rejected"
-    })
-  } catch (error) {
-    handleError(res, error);
-  }
-};
+// exports.projectApproval = async (req, res) => {
+//   try {
+//     const data = req.body;
+//     await updateItem(Models.Project, data, { id: data.id });
+//     res.status(200).json({
+//       code: 200,
+//       status: data.status == 'approved' ? "approved" : "rejected"
+//     })
+//   } catch (error) {
+//     handleError(res, error);
+//   }
+// };
 
 
 
